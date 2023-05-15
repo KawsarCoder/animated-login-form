@@ -1,0 +1,124 @@
+body {
+  background: linear-gradient(to left, midnightblue, brown);
+}
+
+.login-container {
+  margin: 120px auto;
+  width: 400px;
+  height: 500px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.login-container h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.pass-forget {
+  color: blueviolet;
+  margin-bottom: 15px;
+}
+.sign-up {
+  color: blueviolet;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+label {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #777777;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+input {
+  width: 300px;
+  height: 40px;
+  border: none;
+  border-bottom: 2px solid #cccccc;
+  margin-bottom: 30px;
+  font-size: 18px;
+  color: #333333;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 2px solid blueviolet;
+}
+
+button {
+  width: 200px;
+  height: 50px;
+  background: linear-gradient(to right, midnightblue, brown);
+  color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2);
+}
+
+form::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  bottom: -10px;
+  right: -10px;
+  z-index: -1;
+  border: 2px solid blueviolet;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+form:hover::before {
+  opacity: 1;
+  animation: outline 2s ease-in-out infinite;
+}
+
+@keyframes outline {
+  0% {
+    box-shadow: 0 0 0 0px skyblue;
+  }
+  20% {
+    box-shadow: 0 0 0 10px midnightblue;
+  }
+  40% {
+    box-shadow: 0 0 0 20px blueviolet;
+  }
+  60% {
+    box-shadow: 0 0 0 30px salmon;
+  }
+  80% {
+    box-shadow: 0 0 0 40px sandybrown;
+  }
+  100% {
+    box-shadow: 0 0 0 50px rgba(76, 175, 80, 0);
+  }
+}
